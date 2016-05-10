@@ -1,6 +1,7 @@
 package neuron;
 
 import neuron.model.LearningMode;
+import neuron.model.Neuron;
 
 import java.awt.event.ActionListener;
 
@@ -14,12 +15,13 @@ public class Controller {
     }
 
     private Mode mode;
-
     private NeuronView neuronView;
 
     Controller(NeuronView view){
         neuronView = view;
         mode = Mode.LearningMode;
     }
+
+
 
 }
