@@ -14,7 +14,7 @@ public class Main {
         NeuronView watchView = new NeuronView();
         jFrame.setContentPane(watchView.panelNeuron);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.setSize(500, 500);
+        jFrame.setSize(800, 800);
         jFrame.setLocationRelativeTo(null);
         jFrame.setVisible(true);
         System.out.println("NEURON2");
