@@ -4,6 +4,7 @@ import neuron.model.LearningMode;
 import neuron.model.Neuron;
 
 import javax.sound.midi.SysexMessage;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,82 +23,105 @@ public class Controller {
     public Controller(NeuronView view){
         neuronView = view;
         mode = Mode.LearningMode;
+        view.labelMode.setText(mode.toString());
 
-        ActionListener buttonLearningMode = new ActionListener() {
+        ActionListener learningModeButton = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
+                System.out.println("learningModeButton clicked");
+                mode = Mode.LearningMode;
+                view.labelMode.setText(mode.toString());
             }
         };
 
-        ActionListener buttonWorkingMode = new ActionListener() {
+        ActionListener workingModeButton = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-        ActionListener literaButton = new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-
-        ActionListener współczynnikaUczeniaButton = new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-
-        ActionListener współczynnikKształtuButton = new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-
-        ActionListener WagiPoczątkoweButton = new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-
-        ActionListener współczynnikBłęduButton = new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
+                System.out.println("workingModeButton clicked");
+                mode = Mode.WorkingMode;
+                view.labelMode.setText(mode.toString());
             }
         };
 
         ActionListener readPatternSoloButton = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-        ActionListener readPatternsGroupButton = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
-            }
-        };
-        ActionListener wagaButton = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("button clicked");
+                System.out.println("readPatternSoloButton clicked");
             }
         };
 
-        neuronView.setButtonLearningModeClick(buttonLearningMode);
-        neuronView.setButtonWorkingModeClick(buttonWorkingMode);
-        neuronView.setLiteraButtonClick(literaButton);
-        neuronView.setWspółczynnikaUczeniaButtonClick(współczynnikaUczeniaButton);
-        neuronView.setWspółczynnikKształtuButtonClick(współczynnikKształtuButton);
-        neuronView.setWagiPoczątkoweButtonClick(WagiPoczątkoweButton);
-        neuronView.setWspółczynnikBłęduButtonClick(współczynnikBłęduButton);
+        ActionListener ReadPatternsGroupButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("ReadPatternsGroupButton clicked");
+            }
+        };
 
+        ActionListener weightsButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("weightsButtonButton clicked");
+            }
+        };
+
+        ActionListener responseButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("responseButtonButton clicked");
+            }
+        };
+
+        ActionListener letterButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("letterButtonButton clicked");
+            }
+        };
+
+        ActionListener learningFactorButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("learningFactorButtonButton clicked");
+            }
+        };
+
+        ActionListener functionButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("functionButtonButton clicked");
+            }
+        };
+
+        ActionListener scopeOIRWButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("scopeOIRWButtonButton clicked");
+            }
+        };
+
+        ActionListener chartButtonButton = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("chartButtonButton clicked");
+            }
+        };
+
+        neuronView.setlearningModeButtonClick(learningModeButton);
+        neuronView.setworkingModeButtonClick(workingModeButton);
+        neuronView.setReadPatternSoloButtonClick(readPatternSoloButton);
+        neuronView.setReadPatternsGroupButtonClick(ReadPatternsGroupButton);
+        neuronView.setWeightsButtonClick(weightsButtonButton);
+        neuronView.setResponseButtonClick(responseButtonButton);
+        neuronView.setLetterButtonClick(letterButtonButton);
+        neuronView.setLearningFactorButtonClick(learningFactorButtonButton);
+        neuronView.setFunctionButtonClick(functionButtonButton);
+        neuronView.setScopeOIRWButtonClick(scopeOIRWButtonButton);
+        neuronView.setChartButtonClick(chartButtonButton);
+
+    }
+
+    private void changeMode(String mode){
+        neuronView.labelMode.setText(mode);
     }
 
 

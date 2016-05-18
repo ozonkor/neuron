@@ -2,12 +2,12 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="neuron.NeuronView">
   <grid id="27dc6" binding="panelNeuron" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="734" height="538"/>
+      <xy x="20" y="20" width="734" height="539"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="9335e" layout-manager="GridLayoutManager" row-count="8" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="9335e" layout-manager="GridLayoutManager" row-count="8" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
         <properties/>
@@ -15,7 +15,7 @@
         <children>
           <vspacer id="20476">
             <constraints>
-              <grid row="0" column="2" row-span="7" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="6" row-span="7" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
           <grid id="fd69f" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -26,7 +26,7 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="7e5ce" class="javax.swing.JButton" binding="readPatternsGroupButton" default-binding="true">
+              <component id="7e5ce" class="javax.swing.JButton" binding="readPatternsGroupButton">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="179" height="32"/>
@@ -36,7 +36,7 @@
                   <text value="Read patterns group"/>
                 </properties>
               </component>
-              <component id="cc1d9" class="javax.swing.JButton" binding="readPatternSoloButton" default-binding="true">
+              <component id="cc1d9" class="javax.swing.JButton" binding="readPatternSoloButton">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
                     <preferred-size width="179" height="32"/>
@@ -69,155 +69,115 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="d826a" class="javax.swing.JLabel">
+              <component id="d826a" class="javax.swing.JLabel" binding="label1">
                 <constraints>
                   <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label123              "/>
+                  <text value="(0,0,0,0)            "/>
                 </properties>
               </component>
-              <component id="5225a" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-                <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="122" height="24"/>
-                  </grid>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="8c647" class="javax.swing.JTextField" binding="textField3" default-binding="true">
-                <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="122" height="24"/>
-                  </grid>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="51c3c" class="javax.swing.JTextField" binding="textField4" default-binding="true">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="122" height="24"/>
-                  </grid>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="b2d58" class="javax.swing.JTextField" binding="textField5" default-binding="true">
-                <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="122" height="24"/>
-                  </grid>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="9a5c3" class="javax.swing.JTextField" binding="textField6" default-binding="true">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="122" height="24"/>
-                  </grid>
-                </constraints>
-                <properties/>
-              </component>
-              <component id="c2112" class="javax.swing.JButton" binding="wymuszenieButton">
+              <component id="c2112" class="javax.swing.JButton" binding="responseButton">
                 <constraints>
                   <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="odpowiedź neuronu na aktualne wymuszenie"/>
+                  <text value="Response to the chosen extortion"/>
                 </properties>
               </component>
-              <component id="9251c" class="javax.swing.JButton" binding="literaButton">
+              <component id="9251c" class="javax.swing.JButton" binding="letterButton">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="jaka litera została rozpoznana"/>
+                  <text value="Recognized letter"/>
                 </properties>
               </component>
-              <component id="97ae1" class="javax.swing.JButton" binding="współczynnikaUczeniaButton">
+              <component id="97ae1" class="javax.swing.JButton" binding="learningFactorButton">
                 <constraints>
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="wybór współczynnika uczenia"/>
+                  <text value="Learning factor"/>
                 </properties>
               </component>
-              <component id="67c17" class="javax.swing.JButton" binding="współczynnikKształtuButton">
+              <component id="67c17" class="javax.swing.JButton" binding="functionButton">
                 <constraints>
                   <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="wybór współczynnika kształtu funkcji"/>
+                  <text value="Shape function factor"/>
                 </properties>
               </component>
-              <component id="263da" class="javax.swing.JButton" binding="WagiPoczątkoweButton">
+              <component id="263da" class="javax.swing.JButton" binding="scopeOIRWButton">
                 <constraints>
                   <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="zakres losowanych wag początkowych"/>
+                  <text value="Scope of initial random weights"/>
                 </properties>
               </component>
-              <component id="2fb47" class="javax.swing.JLabel">
+              <component id="2fb47" class="javax.swing.JLabel" binding="label2">
                 <constraints>
                   <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label"/>
+                  <text value="(0)"/>
                 </properties>
               </component>
-              <component id="a9abb" class="javax.swing.JLabel">
+              <component id="a9abb" class="javax.swing.JLabel" binding="label3">
                 <constraints>
                   <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label"/>
+                  <text value="L"/>
                 </properties>
               </component>
-              <component id="aef65" class="javax.swing.JLabel">
+              <component id="aef65" class="javax.swing.JLabel" binding="label4">
                 <constraints>
                   <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label"/>
+                  <text value="0.15"/>
                 </properties>
               </component>
-              <component id="be4e0" class="javax.swing.JLabel">
+              <component id="be4e0" class="javax.swing.JLabel" binding="label5">
                 <constraints>
                   <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label"/>
+                  <text value="0.8"/>
                 </properties>
               </component>
-              <component id="2168b" class="javax.swing.JLabel">
+              <component id="2168b" class="javax.swing.JLabel" binding="label6">
                 <constraints>
                   <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Label"/>
+                  <text value="0-10"/>
                 </properties>
               </component>
-              <component id="4100c" class="javax.swing.JButton" binding="współczynnikBłęduButton">
+              <component id="4100c" class="javax.swing.JButton" binding="chartButton">
                 <constraints>
                   <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="wykres współczynnika błędu"/>
+                  <text value="Chart of error rate"/>
                 </properties>
               </component>
-              <component id="6380b" class="javax.swing.JLabel">
+              <component id="6380b" class="javax.swing.JLabel" binding="label7">
                 <constraints>
                   <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -233,27 +193,67 @@
                 </constraints>
                 <properties/>
               </component>
-              <component id="fef9" class="javax.swing.JButton" binding="wagaButton">
+              <component id="fef9" class="javax.swing.JButton" binding="weightsButton">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="274" height="32"/>
                   </grid>
                 </constraints>
                 <properties>
-                  <text value="wartość wag wybranego  neuronu"/>
+                  <text value="Values of the neuron weights"/>
                 </properties>
+              </component>
+              <component id="b2d58" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="122" height="24"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="5225a" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="122" height="24"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="9a5c3" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="122" height="24"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="8c647" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="122" height="24"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="51c3c" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="122" height="24"/>
+                  </grid>
+                </constraints>
+                <properties/>
               </component>
             </children>
           </grid>
-          <grid id="de58e" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="de58e" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="7" column="0" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="0" row-span="1" col-span="9" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
             <children>
-              <component id="d80fa" class="javax.swing.JButton" binding="buttonWorkingMode">
+              <component id="d80fa" class="javax.swing.JButton" binding="workingModeButton">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -261,11 +261,6 @@
                   <text value="Working Mode"/>
                 </properties>
               </component>
-              <vspacer id="5544b">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </vspacer>
               <component id="ce212" class="javax.swing.JLabel" binding="labelMode">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -274,7 +269,7 @@
                   <text value="Label"/>
                 </properties>
               </component>
-              <component id="14012" class="javax.swing.JButton" binding="buttonLearningMode">
+              <component id="14012" class="javax.swing.JButton" binding="learningModeButton">
                 <constraints>
                   <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -286,7 +281,22 @@
           </grid>
           <hspacer id="44f97">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="60634">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="964f6">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="2767b">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
         </children>
