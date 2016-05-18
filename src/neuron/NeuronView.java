@@ -10,13 +10,13 @@ public class NeuronView extends JFrame {
 
     public JPanel panelNeuron;
     public JLabel labelMode;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
+    public JTextField textField1;
+    public JTextField textField2;
+    public JTextField textField3;
+    public JTextField textField4;
+    public JTextField textField5;
+    public JTextField textField6;
+    public JTextField textField7;
     private JButton workingModeButton;
     private JButton learningModeButton;
     private JButton readPatternSoloButton;
@@ -28,13 +28,13 @@ public class NeuronView extends JFrame {
     private JButton functionButton;
     private JButton scopeOIRWButton;
     private JButton chartButton;
-    private JLabel label1;
-    private JLabel label2;
-    private JLabel label3;
-    private JLabel label4;
-    private JLabel label5;
-    private JLabel label6;
-    private JLabel label7;
+    public JLabel label1;
+    public JLabel label2;
+    public JLabel label3;
+    public JLabel label4;
+    public JLabel label5;
+    public JLabel label6;
+    public JLabel label7;
 
     public NeuronView(){
 
@@ -168,6 +168,10 @@ public class NeuronView extends JFrame {
 
     public void setWeightsButtonClick(ActionListener actionListener) {
         weightsButton.addActionListener(actionListener);
+    }
+
+    public void updateLabel(JLabel l, String s){
+        l.setText(s);
     }
 
     private void createUIComponents() {

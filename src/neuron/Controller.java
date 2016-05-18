@@ -30,7 +30,7 @@ public class Controller {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("learningModeButton clicked");
                 mode = Mode.LearningMode;
-                view.labelMode.setText(mode.toString());
+                changeMode(mode);
             }
         };
 
@@ -39,7 +39,7 @@ public class Controller {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("workingModeButton clicked");
                 mode = Mode.WorkingMode;
-                view.labelMode.setText(mode.toString());
+                changeMode(mode);
             }
         };
 
@@ -61,6 +61,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("weightsButtonButton clicked");
+                neuronView.label1.setText(neuronView.textField1.getText());
             }
         };
 
@@ -68,6 +69,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("responseButtonButton clicked");
+                neuronView.label2.setText(neuronView.textField2.getText());
             }
         };
 
@@ -75,6 +77,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("letterButtonButton clicked");
+                neuronView.label3.setText(neuronView.textField3.getText());
             }
         };
 
@@ -82,6 +85,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("learningFactorButtonButton clicked");
+                neuronView.label4.setText(neuronView.textField4.getText());
             }
         };
 
@@ -89,6 +93,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("functionButtonButton clicked");
+                neuronView.label5.setText(neuronView.textField5.getText());
             }
         };
 
@@ -96,6 +101,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("scopeOIRWButtonButton clicked");
+                neuronView.label6.setText(neuronView.textField6.getText());
             }
         };
 
@@ -103,6 +109,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("chartButtonButton clicked");
+                neuronView.label7.setText(neuronView.textField7.getText());
             }
         };
 
@@ -120,9 +127,11 @@ public class Controller {
 
     }
 
-    private void changeMode(String mode){
-        neuronView.labelMode.setText(mode);
+    private void changeMode(Mode mode){
+        neuronView.labelMode.setText(mode.toString());
     }
+
+
 
 
 
